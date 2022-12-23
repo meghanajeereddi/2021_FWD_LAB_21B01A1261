@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 300px;
+            height:200px;
+            border: 2px solid black;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items:center;
+        }
+        .one{
+            border:2px solid black;
+            width:70px;
+            height:20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="t1" placeholder="enter operand1">
+    <input type="text" id="t2" placeholder="enter operand2">
+    <input type="text" id="t3" placeholder="enter operator"> <br>
+    <div class="container">
+        <div class="one">1</div>
+        <div class="one">2</div>
+        <div class="one">3</div>
+        <div class="one">+</div>
+        <div class="one">4</div>
+        <div class="one">5</div>
+        <div class="one">6</div>
+        <div class="one">*</div>
+        <div class="one">7</div>
+        <div class="one">8</div>
+        <div class="one">9</div>
+        <div class="one">-</div>
+        <div class="one">0</div>
+        <button value="click" onclick="submission()">=</button>
+        <div class="one">%</div>
+    </div>
+    <script>
+        function submission(){
+            op1=Number(document.getElementById('t1').value);
+            op2=Number(document.getElementById('t2').value);
+            op=document.getElementById('t3').value;
+            let result;
+            if(op=='+'){
+                result=op1+op2;
+                alert("result is"+result);
+                
+            }
+            if(op=='*'){
+                result=op1*op2;
+                alert("result is"+result);
+            }
+            if(op=='-'){
+                result=op1-op2;
+                alert("result is"+result);
+            }
+            if(op=='%'){
+                result=op1%op2;
+                alert("result is"+result);
+            }
+
+        }
+    </script>
+</body>
+</html>
